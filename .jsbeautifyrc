@@ -1,0 +1,17 @@
+{
+  "beautify.language": {
+    "css": ["css", "scss"],
+    "html": ["htm", "html"]
+  },
+  "indent_size": 2,
+  "indent_char": " ",
+  "css": {
+    "indent_size": 2
+  },
+  "beautify.ignore": [
+    "index.html",
+    "*/test.js",
+    "**/test/*",
+    "**/test/**/*"
+  ]
+}
