@@ -36,7 +36,8 @@ p {
 }
 
 .l-heading {
-  font-size: 40px;  
+  font-size: 40px;
+  line-height: 1.2;
 }
 
 .lead {
@@ -209,8 +210,12 @@ p {
 }
 
 /* about: testimonials */
+
 #testimonials {
-  height: 600px;
+  /* forcing 100% height on this makes the image fill
+  the whole background and prevents having to add
+  an additional clearfixed div */
+  height: 100%;
   background: url('../img/test-bg.jpg') no-repeat center center/cover;
   padding-top: 100px;
 }
