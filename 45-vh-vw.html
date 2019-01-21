@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vh & vw units</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    header {
+      background: #333 url(https://source.unsplash.com/random) no-repeat center center/cover;
+      color: #fff;
+      height: 100vh;
+      /* width: 50vw; */
+      text-align: center;
+      padding: 2rem;
+      padding-top: 15rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 100;
+      line-height: 1;
+    }
+    header p {
+      margin: 1rem 0;
+      font-weight: 200;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: lightgray;
+      color: darkgray;
+      padding: 0.75rem 2rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    @media (max-height: 500px) {
+      header {
+        padding-top: 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to our website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi consequatur consequuntur similique fugit ex quo!</p>
+    <a href="#" class="btn">Find Out More</a>
+  </header>
+  <section>
+    <h3>About our company</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, repudiandae eligendi amet vero exercitationem eaque nostrum pariatur, ex odit cum officiis est, facilis necessitatibus officia debitis saepe explicabo adipisci sint dolor a. Itaque ab sequi soluta recusandae, quam, natus quisquam tenetur illum, repellat ea incidunt magnam enim praesentium eos eveniet.</p>
+  </section>
+</body>
+</html>
