@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>67: Before & After</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      background: #333;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+    }
+    /* separate the background from the actual header */
+    header:before {
+      content: '';
+      background: url(https://source.unsplash.com/featured/?trees,mountain,lake) no-repeat center center/cover;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      /* this is key to sending it below the text content of header */
+      z-index: -1;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 1rem;
+    }
+  </style>
+</head>
+<body>
+  
+<header>
+  <h1>Hello World</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officia!</p>
+</header>
+
+<section>
+  <h3>Lorem, ipsum dolor</h3>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis itaque aspernatur beatae iure fuga error, dolores accusamus, vitae doloribus, atque iste magni incidunt explicabo cumque. Nulla voluptatem consectetur velit iure.</p>
+</section>
+
+</body>
+</html>

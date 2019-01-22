@@ -6,4 +6,10 @@
 
 body {
   font-family: HelveticaNeue, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+}
+
+input, textarea {
+  font-size: inherit;
+  padding: 0.5rem;
 }

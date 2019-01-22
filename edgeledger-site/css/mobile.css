@@ -1,0 +1,78 @@
+#what .items {
+  display: block;
+  padding: 1rem;
+}
+/* align icon to left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* position icon */
+#what .items .item i {
+  margin-right: 1.3rem;
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
+/* phones */
+@media (max-width: 500px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar .logo {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  #navbar ul {
+    padding: 0.5rem;
+  }
+
+  /* necessary because navbar 
+  has grown in height */
+  #showcase .showcase-content {
+    top: 110px;
+    margin-top: -3rem; /* content is a bit too low on phones */
+  }
+
+  #who {
+    display: block;
+  }
+  #who .who-img {
+    /* display: none; */
+    height: 200px;
+  }
+
+  #clients .items img {
+    width: 80%;
+  }
+  #clients .items div:last-child {
+    display: none;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+  #contact .map {
+    height: 200px;
+    /* border-top: 2px solid var(--dkgray); */
+  }
+}
+
+/* for older phones like iPhone 5 & Galaxy,
+the text looks a bit too big */
+@media (max-height: 640px) {
+  #showcase .showcase-content {
+    margin-top: -4.5rem;
+    top: 130px;
+  }
+  .l-heading {
+    font-size: 3rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+}
