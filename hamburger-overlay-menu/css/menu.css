@@ -42,6 +42,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
+
 }
 /* top & bottom lines */
 .menu-wrap .hamburger > div::before,
@@ -73,3 +74,89 @@
 .menu-wrap .toggler:checked:hover + .hamburger > div {
   transform: rotate(225deg);
 }
+
+/*
+  Show menu
+  ---
+  The tilde (~) targets a preceeding element,
+  needed in this case
+*/
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+/* menu items transition in (note the delay) */
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay);
+  border-radius: 50%;
+  /*
+    Has to be big enough to cover
+    various size screens when expanded
+    */
+  width: 250vw;
+  height: 250vw;
+  display: flex;
+  /*
+    This makes it into an actual circle,
+    keeping it from auto-scaling
+    */
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul li {
+  list-style-type: none;
+  /*
+    This doesn't color the links, but provides
+    a color base that links can inherit
+    */
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu-wrap .menu > div > div > ul li > a:hover {
+  color: var(--secondary);
+  font-size: 1.6rem;
+}
+

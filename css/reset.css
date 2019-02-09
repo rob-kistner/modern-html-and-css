@@ -1,3 +1,8 @@
+:root {
+  --dark: #333;
+  --light: #f4f4f4;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
