@@ -7,6 +7,11 @@ Udemy course from Brad Traversy on Udemy
 
 In 106, shows how to set up GitHub to publish to Netlify.
 
+Location:
+
+> https://sleepy-goldstine-c45785.netlify.com
+
+
 I made a new branch with news-grid as the root project and nothing else, and pushed that to Netlify, worked well that way.
 
 ```
