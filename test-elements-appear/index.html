@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <style>
+    :root {
+      --dur: all 0.3s ease-out;
+    }
+    .btn {
+      background-color: var(--light);
+      border: none;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      text-align: center;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.05),
+      0 3px 1px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      display: block;
+      margin: 3rem auto 2rem;
+      transition: var(--dur);
+      color: var(--gray-2);
+    }
+    .btn i.fal {
+      margin-right: 1rem;
+      transition: var(--dur);
+      text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+      color: var(--gray-2);
+    }
+    .btn:hover i.fal {
+      margin-right: 0.25rem;
+      transform: rotateZ(-90deg);
+      text-shadow: -2px 0px 1px rgba(0,0,0,0.3);
+      transition: var(--dur);
+      color: #f00;
+    }
+    .btn:hover {
+      box-shadow: inset 0 0 20px rgba(255,255,255,0.75),
+      0 5px 5px rgba(0,0,0,0.2);
+      transition: var(--dur);
+      color: var(--gray-4);
+    }
+  </style>
+</head>
+<body>
+  
+  <button class='btn'>
+    <i class="fal fa-chevron-down"></i>
+    Button
+  </button>
+  
+  <div>
+    <div>
+      <h1>Headline</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A aspernatur consequatur dolorum enim recusandae excepturi necessitatibus doloremque. Repudiandae dolorem dicta aliquam iure nihil blanditiis voluptas maiores. Perferendis expedita consequatur nemo.</p>
+      <ul>
+        <li>Item here</li>
+        <li>Item here</li>
+        <li>Item here</li>
+        <li>Item here</li>
+        <li>Item here</li>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>
