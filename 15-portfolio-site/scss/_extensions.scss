@@ -1,0 +1,7 @@
+// sass extending classes
+
+@mixin even-cols($numcols, $gridgap: 1rem) {
+  display: grid;
+  grid-gap: $gridgap;
+  grid-template-columns: repeat($numcols, 1fr);
+}

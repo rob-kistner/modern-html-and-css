@@ -7,3 +7,10 @@ $dark-color    : #333 !default;
 $medium-color  : #ccc !default;
 $bg-image      : url('../img/showcase.jpg') !default;
 
+// rk added
+
+$font-weight-normal: 400 !important;
+$font-weight-bold: 600 !important;
+$font-weight-light: 300 !important;
+
+$font-heading-weight: $font-weight-bold;
