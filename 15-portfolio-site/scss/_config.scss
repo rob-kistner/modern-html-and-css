@@ -7,6 +7,21 @@ $dark-color    : #333 !default;
 $medium-color  : #ccc !default;
 $bg-image      : url('../img/showcase.jpg') !default;
 
+/* ----------------------------------------
+  function: set text color
+
+  given a background color (background-color: ), 
+  return the properly contrasting color 
+  to use for text (color: )
+---------------------------------------- */
+@function set-text-color($bgcolor) {
+  @if(lightness($bgcolor) > 42) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // rk added
 
 $font-weight-normal: 400 !important;
@@ -14,3 +29,5 @@ $font-weight-bold: 600 !important;
 $font-weight-light: 300 !important;
 
 $font-heading-weight: $font-weight-bold;
+
+$trans-tweening: cubic-bezier(0.2, 1, 0.3, 1)

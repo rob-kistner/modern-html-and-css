@@ -44,6 +44,28 @@ input[class^="btn-"] {
   }
 }
 
+// backgrounds
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+// text
+
 .lead {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -85,6 +107,23 @@ input[class^="btn-"] {
   }
 }
 
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  border: none;
+  display: block;
+  margin: 1rem auto;
+}
 
 // rk added
 .font-light {  font-weight: $font-weight-light;  }

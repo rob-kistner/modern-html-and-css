@@ -4,6 +4,10 @@
 @import 'base';
 @import 'utilities';
 
+// pages
+@import 'page-work';
+
+
 // Logo
 #logo {
   width: 70px;
@@ -49,7 +53,7 @@
   &-home {
     background: $bg-image no-repeat center right / cover;
     height: 100vh;
-    color: #fff;
+    color: set-text-color(#000);
 
     // Header Content
     & .header-content {
@@ -64,13 +68,16 @@
   }
   // Header Inner
   &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 }
 
 // Home Sections
 #home {
 
-  // home section A
+  // h ome section A
   &-a {
     .specials {
       margin-top: 3rem;
@@ -113,4 +120,205 @@
     }
   }
 
-} // end-home
+  // home section C
+  &-c {
+    & .process {
+      @include even-cols(4, 1rem);
+      
+      @media (max-width: 768px) {
+        @include even-cols(2, 1.5rem);
+      }
+      
+      @media (max-width: 500px) {
+        @include even-cols(1, 0);
+      }
+
+      & > div {
+        padding: 1rem;
+        border-radius: 6px;
+        transition: all 1s;
+      }
+      & > div:hover {
+        background-color: lighten($main-color, 35%);
+      }
+
+      // process icon
+      &-icon {
+        position: relative;
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        top: 0;
+        line-height: 70px;
+        text-align: center;
+        transition: all 0.5s;
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          top: -14px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+      
+      // process step
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: 'Dosis', sans-serif;
+        font-size: 28px;
+        background: $main-color;
+        color: set-text-color($main-color); 
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+    }
+  }
+
+}
+
+// About sections
+#about {
+
+  // About-A seciton
+  &-a {
+    & .about-info {
+      display: grid;
+      // visual representation of the grid
+      grid-template-areas:
+        'bioimage bio bio'
+        'aw1 aw2 aw3';
+      grid-gap: 1.2rem;
+    }
+
+    // grid area
+    .bio-image {
+      grid-area: bioimage;
+    }
+    .bio {
+      grid-area: bio;
+      display: grid;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+      text-align: left;
+      align-items: center;
+    }
+    .award-1 {
+      grid-area: aw1;
+    }
+    .award-2 {
+      grid-area: aw2;
+    }
+    .award-3 {
+      grid-area: aw3;
+    }
+
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;  
+    }
+  }
+  
+  // About-B section
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: darken($medium-color, 52%);
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      & div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background: $main-color;
+        box-shadow: 15px 0 30px rgba($main-color, 0.5);
+      }
+    }
+  }
+
+  // About-C section
+  &-c {
+    .about-logos {
+      @include even-cols(4, 2rem);
+
+      & img {
+        width: 70%;
+      }
+    }
+  }
+
+  // About-D section
+  &-d {
+    .testimonials {
+      @include even-cols(4, 0.5rem);
+    
+      & ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      & p {
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+      & img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+}
+
+// footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  & .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    & .social .fab {
+      margin-right: 1rem;
+      border: 2px solid lighten($dark-color, 30%);
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.25s;
+
+      &:hover {
+        background: $main-color;
+        border-color: $main-color;
+        color: $dark-color;
+      }
+    }
+  }
+}

@@ -14,7 +14,12 @@ body {
   /* this will hide the scrollbars */
   overflow: hidden;
 }
-
+#page-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100000px;
+}
 .page {
   display: flex;
   flex-direction: column;
@@ -22,6 +27,7 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh;
+  width: 100vw;
   padding: 0 4rem;
 }
 .page h1 {

@@ -8,9 +8,10 @@ $('.btn').on('click', function(e) {
     e.preventDefault()
 
     const hash = this.hash
+
     $('html, body').animate(
       {
-        scrollTop: $(hash).offset().top - targetoffset
+        scrollLeft: $(hash).offset().left - targetoffset
       },
       scrolltime
     )
